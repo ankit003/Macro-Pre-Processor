@@ -5,6 +5,7 @@
 The name of the proposed language is 'mero'. 'mero' is an italian word that means simple. 
 It is designed to be easy to learn.
 The simpicity of the language is a consequence of the syntax and the reserved words used.
+
 One unique feature of syntax is that every control construct is enclosed within braces unlike C language which allows other variations of the syntax.
 The reserved words are directly taken from the most spoken english language, which make the program more readable and intelligible.
 Rules are strict but that makes the program less prone to errors and easy to debug.
@@ -29,7 +30,7 @@ The only requirement for execution of a program writtten in mero is that a pytho
 
 7.For conditional macros, we have defined keywords - "ifconditiontrue(expression) & ifconditionfalse" (Illustrated in the example below).
 
-Note: "ifconditionfalse" is similar to the "else" in C language. It should be used only after "ifconditiontrue" is used.
+	Note: "ifconditionfalse" is similar to the "else" in C language. It should be used only after "ifconditiontrue" is used.
 
 8.The features -	
 	(i) Nested MACRO definitions,
@@ -37,18 +38,3 @@ Note: "ifconditionfalse" is similar to the "else" in C language. It should be us
 	(iii) Comments,
 	(iv) Conditional Macros
   have all been covered in the given examples.txt (REFER INPUT FILES i.e. inputa.txt , inputc.txt & inputp.txt)
-
-
-
-
-# EXAMPLE Raw Input:
-
-ORCAM					#start of macro
-MAX5					#macro name
-ARG 2					#2 arguments
-a,b					#argument names
-ifconditiontrue(a>b)			#conditional macro (macro body starts here)
-{a-b+100}
-ifconditionfalse			#conditional macro
-{b-a+100}				#macro body ends here
-DNEM					#end of macro
