@@ -1,6 +1,19 @@
 # Macro Pre Processor
 
-MACRO SYNTAX :
+# Brief Overview:
+
+The name of the proposed language is 'mero'. 'mero' is an italian word that means simple. 
+It is designed to be easy to learn.
+The simpicity of the language is a consequence of the syntax and the reserved words used.
+One unique feature of syntax is that every control construct is enclosed within braces unlike C language which allows other variations of the syntax.
+The reserved words are directly taken from the most spoken english language, which make the program more readable and intelligible.
+Rules are strict but that makes the program less prone to errors and easy to debug.
+
+The interpretor of the language is written in Python (which is a high level language).Since python is portable , mero is also portable within various families of preprocessors.
+It is machine-independent.
+The only requirement for execution of a program writtten in mero is that a python3 interpreter should be installed in that machine.
+
+# MACRO SYNTAX :
 
 1.MACRO should start with predefined keyword (i.e.ORCAM).
 
@@ -18,15 +31,17 @@ MACRO SYNTAX :
 
 Note: "ifconditionfalse" is similar to the "else" in C language. It should be used only after "ifconditiontrue" is used.
 
-8.The features -	(i) Nested MACRO definitions,
-					(ii) Single-line/multi-line definitions,
-					(iii) Comments,
-					(iv) Conditional Macros
+8.The features -	
+	(i) Nested MACRO definitions,
+	(ii) Single-line/multi-line definitions,
+	(iii) Comments,
+	(iv) Conditional Macros
   have all been covered in the given examples.txt (REFER INPUT FILES i.e. inputa.txt , inputc.txt & inputp.txt)
 
 
 
-EXAMPLE:
+
+# EXAMPLE Raw Input:
 
 ORCAM															#start of macro
 MAX5															#macro name
@@ -37,19 +52,3 @@ ifconditiontrue(a>b)							#conditional macro (macro body starts here)
 ifconditionfalse									#conditional macro
 {b-a+100}													#macro body ends here
 DNEM															#end of macro
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-
-# Brief Overview:
-
-The name of the proposed language is 'mero'. 'mero' is an italian word that means simple. 
-It is designed to be easy to learn.
-The simpicity of the language is a consequence of the syntax and the reserved words used.
-One unique feature of syntax is that every control construct is enclosed within braces unlike C language which allows other variations of the syntax.
-The reserved words are directly taken from the most spoken english language, which make the program more readable and intelligible.
-Rules are strict but that makes the program less prone to errors and easy to debug.
-
-The interpretor of the language is written in Python (which is a high level language).Since python is portable , mero is also portable within various families of preprocessors.It is machine-independent.
-The only requirement for execution of a program writtten in mero is that a python3 interpreter should be installed in that machine.
