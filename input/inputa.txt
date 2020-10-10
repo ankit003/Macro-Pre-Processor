@@ -1,0 +1,42 @@
+ORCAM												;Start of macro.
+MOV      											; This is the macro name.
+ARG 1												; here 1 is number of arguments.
+a													; This line gives the names of arguments
+mov eax,a											
+mov ebx,eax											
+DNEM												; End of macro.
+
+
+SECTION .data
+
+stm:    db "Numbers,abs diff,random nos,equation: %d",10,0
+c: dd 0
+
+SECTION .text
+extern printf
+extern atoi
+
+global main				
+main:					
+	push	ebp			
+	mov	ebp,esp			
+	
+    mov eax,DWORD[ebp+8]							;random program comment
+    mov ebx,DWORD[ebp+12]
+    
+    add ebx,4
+    mov eax,[ebx]
+    push eax
+    call atoi
+    push eax
+    mov edi,eax
+    push stm
+    call printf
+    
+    MOV(10)											;EXPANDED MACRO
+    
+    mov	esp, ebp		
+	pop	ebp			
+	
+	mov	eax, 0			
+	ret

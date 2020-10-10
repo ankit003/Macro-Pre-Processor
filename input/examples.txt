@@ -1,0 +1,117 @@
+1. OUTPUT (When a C program is given as input) i.e. inputc.txt:
+
+void main()
+{
+
+if(i==j)
+return 0;
+
+int min = 32676,k;
+int count;
+
+for(k=i;k< 56 + 20 + 647;k++)
+{
+	
+	
+	//some random comment
+	
+	if(count<min)
+		min = count;
+}
+
+for ( k = 50 ; k < 12 ; 2 + 20 + 647 ) 
+ 
+Inside for loop of macro 2 
+																			//macro 2 expansion
+
+for ( k = 10 ; k < 20 ; 2 + 20 + 647 ) 
+ 
+Inside for loop of macro 2 - 100											//macro 3 expansion	(NESTED MACRO)
+
+//another comment
+
+return min;
+}
+
+--- REFER inputc.txt for INPUT GIVEN.
+
+
+
+2. OUTPUT (When an assembly language program is given as input) i.e. inputa.txt:
+
+
+SECTION .data
+
+stm:    db "Numbers,abs diff,random nos,equation: %d",10,0
+c: dd 0
+
+SECTION .text
+extern printf
+extern atoi
+
+global main				
+main:					
+	push	ebp			
+	mov	ebp,esp			
+	
+    mov eax,DWORD[ebp+8]							;random program comment
+    mov ebx,DWORD[ebp+12]
+    
+    add ebx,4
+    mov eax,[ebx]
+    push eax
+    call atoi
+    push eax
+    mov edi,eax
+    push stm
+    call printf
+    
+ 	mov eax , 10 									;EXPANDED MACRO
+ 	mov ebx , eax 
+											    
+    mov	esp, ebp		
+	pop	ebp			
+	
+	mov	eax, 0			
+	ret
+
+--- REFER inputa.txt for INPUT GIVEN.
+
+
+
+3. OUTPUT (When a Python program is given as input) i.e. inputp.txt:
+
+
+itext=open("input.txt","r")
+otext=open("output.txt","w")
+ip1_list=[]
+ip2_list=[]
+cur_word=0
+for line in itext:
+	ip1_list.append(line)	
+
+for line in ip1_list:
+	lexemes = word_div(line)
+	for word in lexemes:
+		ip_list.append(word)
+	ip_list.append("\n")
+
+														#EXPANDING MACRO 1
+sum = 10 + 20 + 647	
+			
+														#EXPANDING MACRO 2
+ 
+10 + 20 + 647 + 30 
+
+
+														#EXPANDING MACRO 3	(NESTED MACRO)
+ 
+1 + 20 + 647 + 2 / 45 + 99
+
+														#EXPANDING MACRO 4
+3 - 2 + 100
+
+														#EXPANDING MACRO 5
+3 - 2 + 100 
+
+--- REFER inputp.txt for INPUT GIVEN.

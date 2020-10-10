@@ -1,0 +1,52 @@
+ORCAM												//Start of macro 1
+MAX      											// This is the macro name.
+ARG 1												// here 1 is number of arguments.
+a													// This line gives the names of arguments
+a+20+647											// Body of macro.
+DNEM												// End of macro.
+
+ORCAM												//start of macro 2
+MAX2
+ARG 2
+c,d
+for(k=c;k<d;MAX(2))
+   	/*
+   	This comment should not be a part of expansion.
+	*/
+	Inside for loop of macro 2
+DNEM
+
+ORCAM												//start of macro 3
+MAX3
+ARG 1
+e
+MAX2(10,20)-e
+DNEM
+
+void main()
+{
+
+if(i==j)
+return 0;
+
+int min = 32676,k;
+int count;
+
+for(k=i;k<MAX(56);k++)
+{
+	
+	
+	//some random comment
+	
+	if(count<min)
+		min = count;
+}
+
+MAX2(50,12)											//macro 2 expansion
+
+MAX3(100)											//macro 3 expansion	(NESTED MACRO)
+
+//another comment
+
+return min;
+}

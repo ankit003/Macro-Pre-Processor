@@ -1,0 +1,72 @@
+ORCAM		#Start of macro 1.
+MAX      	# This is the macro name.
+ARG 1		# here 1 is number of arguments.
+a			# This line gives the names of arguments
+a+20+647	# Body of macro.
+DNEM		# End of macro.
+
+ORCAM		#start of macro 2
+MAX2
+ARG 2
+c,d
+   	'''
+	This comment should not be a part of expansion.
+	blah
+	'''
+MAX(c)+d
+DNEM
+
+ORCAM		#start of macro 3
+MAX3
+ARG 1
+e
+MAX2(1,2) /45 +e
+DNEM
+
+ORCAM		#start of macro 4
+MAX4
+ARG 2
+a,b
+ifconditiontrue(a>b)
+{a-b+100}
+DNEM
+
+ORCAM		#start of macro 5
+MAX5
+ARG 2
+a,b
+ifconditiontrue(a>b)
+{a-b+100}
+ifconditionfalse
+{b-a+100}
+DNEM
+
+itext=open("input.txt","r")
+otext=open("output.txt","w")
+ip1_list=[]
+ip2_list=[]
+cur_word=0
+for line in itext:
+	ip1_list.append(line)	
+
+for line in ip1_list:
+	lexemes = word_div(line)
+	for word in lexemes:
+		ip_list.append(word)
+	ip_list.append("\n")
+
+														#EXPANDING MACRO 1
+sum = MAX(10)	
+			
+														#EXPANDING MACRO 2
+MAX2(10,30)
+
+														#EXPANDING MACRO 3	(NESTED MACRO)
+MAX3(99)
+
+														#EXPANDING MACRO 4
+MAX4(3,2)
+
+														#EXPANDING MACRO 5
+MAX5(3,2)
+
