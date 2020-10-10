@@ -14,7 +14,7 @@ The interpretor of the language is written in Python (which is a high level lang
 It is machine-independent.
 The only requirement for execution of a program writtten in mero is that a python3 interpreter should be installed in that machine.
 
-# MACRO SYNTAX :
+# Macro Syntax :
 
 1.MACRO should start with predefined keyword (i.e.ORCAM).
 
