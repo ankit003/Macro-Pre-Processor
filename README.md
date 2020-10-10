@@ -43,12 +43,12 @@ Note: "ifconditionfalse" is similar to the "else" in C language. It should be us
 
 # EXAMPLE Raw Input:
 
-ORCAM															#start of macro
-MAX5															#macro name
-ARG 2															#2 arguments
-a,b																#argument names
-ifconditiontrue(a>b)							#conditional macro (macro body starts here)
+ORCAM					#start of macro
+MAX5					#macro name
+ARG 2					#2 arguments
+a,b					#argument names
+ifconditiontrue(a>b)			#conditional macro (macro body starts here)
 {a-b+100}
-ifconditionfalse									#conditional macro
-{b-a+100}													#macro body ends here
-DNEM															#end of macro
+ifconditionfalse			#conditional macro
+{b-a+100}				#macro body ends here
+DNEM					#end of macro
