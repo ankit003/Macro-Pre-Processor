@@ -32,9 +32,9 @@ The only requirement for execution of a program writtten in mero is that a pytho
 
 	Note: "ifconditionfalse" is similar to the "else" in C language. It should be used only after "ifconditiontrue" is used.
 
-8.The features -	
-	(i) Nested MACRO definitions,
-	(ii) Single-line/multi-line definitions,
-	(iii) Comments,
+8.The features -
+	(i) Nested MACRO definitions
+	(ii) Single-line/multi-line definitions
+	(iii) Comments
 	(iv) Conditional Macros
   have all been covered in the given examples.txt (REFER INPUT FILES i.e. inputa.txt , inputc.txt & inputp.txt)
